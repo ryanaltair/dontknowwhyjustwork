@@ -1,3 +1,4 @@
+
 in three.js
 
 when you use the stl loader
@@ -7,14 +8,16 @@ that it will load stl file and add it to scene
 depends on stl file type,
 
 case bin stl file:
+
 it will turns into bufferGeometry
 
 case ascii stl file:
+
 it will turns into geometry
 
 everything works fine
 
-BUT
+_BUT_
 
 if you get a bin stl file
 and you want to add it as a geometry
