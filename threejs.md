@@ -47,3 +47,5 @@ jsut void the faceVertexUvs[0] in newgeometry
 newgeometry.faceVertexUvs[0] = []
 ```
 and it works
+
+not need to do this anymore when use three.js r92
