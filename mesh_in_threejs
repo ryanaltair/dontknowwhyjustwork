@@ -1,0 +1,30 @@
+in threejs
+
+point save as Vector3
+
+then many points make a geometry
+
+add material 
+
+we get the real mesh
+
+then use scene.add(mesh)
+
+now we could see mesh
+
+in mesh
+
+veritices store in array
+
+and face3 array 
+
+keep data for how mesh's faces order
+
+every face3 
+
+get 3 point as vector3
+
+to do: need to check is this order important
+
+and a normal as vector3
+
