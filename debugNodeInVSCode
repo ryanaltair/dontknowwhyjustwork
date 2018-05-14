@@ -1,0 +1,13 @@
+how to
+
+```code . ``` to open project in VS code
+
+select the debug panel, on the left, look like a debug icon
+
+add the setup
+
+edit the ```program```  so vscode can detect where the app start
+
+save and press the play button (a green triangle icon)
+
+now enjoy
