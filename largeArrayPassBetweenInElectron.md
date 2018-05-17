@@ -1,3 +1,5 @@
+# intro
+
 in electron, you get 2 process, at least
 
 sometimes you need to pass some data from one to another
@@ -20,12 +22,11 @@ so make it way out:
 that is slice the array and everything good.
 
 -------------------------
+# how
 
-old way
+## old way
 
------------------------
-===================
-Main side
+### Main side
 ```
 ipcMain.on('channelA',(event,largeArray)=>{
     let arrayGet = largeArray
@@ -33,10 +34,8 @@ ipcMain.on('channelA',(event,largeArray)=>{
 })
 ```
 
-=====================
 
-
-Renderer side
+### Renderer side
 
 ```
 let bigArray= new Array(1000000)
@@ -44,13 +43,11 @@ bigArray.fill("heavy data")
 ipcRenderer.send("channelA",bigArray)
 ```
 
-=====================
 
+## new way
 
-------------------
-new way
-===================
-Main side
+### Main side
+
 ```
 let arrayLength
 let arrayGet
@@ -69,7 +66,8 @@ ipcMain.on('channelA', (event, largeArraySlice) => {
 })
 ```
 
-Renderer side
+### Renderer side
+
 ```
 
 let bigArray = new Array(1000000)
@@ -89,4 +87,4 @@ for (let i = 0; i < bigArrayLength; i += 5000) {
 
 ```
 
-
+slice happy
