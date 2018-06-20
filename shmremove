@@ -1,0 +1,15 @@
+when use raspberry pi（3B） with raspbian
+
+and log as pi(the default user)
+
+when save files to /dev/shm 
+then when pi logout
+
+the files saved before
+will just remove by system
+
+prevent from deleting
+
+just change the owner of the files to the root
+
+then they will keep until reboot
