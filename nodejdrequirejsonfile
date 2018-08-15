@@ -1,0 +1,41 @@
+node v8.11.3
+
+when using require to load json file
+
+it seems that it will have buffer to save last load
+
+so sometimes it will back you old data
+
+for example 
+
+last.json
+
+```
+{
+"hello":1
+}
+```
+
+new.json
+
+```
+{
+"hello":2
+}
+```
+
+jscode here
+
+```
+let shell=require('shelljs')
+let load=requier('./last.json')
+console.log(load.hello)
+// will echo 1
+shell.exec('rm last.json')
+shell.exec('mv new.json last.json')
+// now we have a new last.json
+load=require('./last.json')
+console.log(load.hello)
+// will echo 1 still
+
+```
